@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Advanced DSA/Advanced DSA.iml" filepath="$PROJECT_DIR$/Advanced DSA/Advanced DSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Advancedjava/Advancedjava.iml" filepath="$PROJECT_DIR$/Advancedjava/Advancedjava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Codingninjas/Codingninjas.iml" filepath="$PROJECT_DIR$/Codingninjas/Codingninjas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/IdeaProjects.iml" filepath="$PROJECT_DIR$/.idea/IdeaProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOPs/OOPs.iml" filepath="$PROJECT_DIR$/OOPs/OOPs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOPs rev/OOPs rev.iml" filepath="$PROJECT_DIR$/OOPs rev/OOPs rev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RECURSION/RECURSION.iml" filepath="$PROJECT_DIR$/RECURSION/RECURSION.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Recursionarray/Recursionarray.iml" filepath="$PROJECT_DIR$/Recursionarray/Recursionarray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Revisionjava/Revisionjava.iml" filepath="$PROJECT_DIR$/Revisionjava/Revisionjava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode/leetcode.iml" filepath="$PROJECT_DIR$/leetcode/leetcode.iml" />
+    </modules>
+  </component>
+</project>
