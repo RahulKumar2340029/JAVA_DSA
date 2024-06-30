@@ -8,6 +8,23 @@ public class leetcode7 {
         int[] nums = {1,1,4,2,1,3};
 //        System.out.println(findKthLargest(nums,2));
         System.out.println(heightChecker(nums));
+        String s = "hello";
+
+        System.out.println(s.replaceAll("l","k"));
+        rotate(nums,3);
+    }
+    public static void rotate(int[] arr, int k) {
+        int[] temp = new int[k];
+        for(int i=0;i<k;i++){
+            temp[i] = arr[arr.length-k+i];
+        }
+        for(int i=k;i<arr.length;i++){
+            arr[i] = arr[i-k];
+        }
+        for(int i=0;i<k;i++){
+            arr[i] = temp[i];
+        }
+        System.out.println(Arrays.toString(arr));
     }
     public static int heightChecker(int[] heights) {
         int[] heights1 = new int[heights.length];

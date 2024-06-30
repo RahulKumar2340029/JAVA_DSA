@@ -7,7 +7,7 @@ public class leetcode5 {
         int []arr = {10,9,8,7,6,5,4,3,2,1};
         int[] arr2 = {4,5,6,7,0,2,1,3};
         int[] arr3 = {52,-91,72};
-        int[] arr4 = {1,1,2};
+        int[] arr4 = {1,1,2,2};
         System.out.println(removeDuplicates(arr4));
 //        System.out.println(Arrays.toString(removeDuplicates(arr4)));
 //        System.out.println(largestAltitude(arr3));

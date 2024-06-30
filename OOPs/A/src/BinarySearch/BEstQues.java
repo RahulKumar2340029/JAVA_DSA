@@ -7,6 +7,8 @@ public class BEstQues {
         int[] arr = {10,20,30,40};
         int ans = Allocate_min_no_of_pages(arr,2);
         System.out.println(ans);
+        String s = new String();
+
     }
     static int Allocate_min_no_of_pages(int[] arr,int k){
         int s = max(arr);

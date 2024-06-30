@@ -1,30 +1,35 @@
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
+
+import java.util.*;
 
 public class Main {
+
     public static void main(String[] args) {
-        int[][] arr = {{1,2},{2,3}};
-        int[][] b = {{1,0},{0,1}};
-//        System.out.println(Arrays.deepToString(matrixmul(arr,b,2,2,2)));
-//        System.out.println(Arrays.deepToString(matrixmul(arr,b,2,2)));
-        ArrayList ans = new ArrayList(12);
-        System.out.println(ans);
+        Scanner scanner = new Scanner(System.in);
+//        int n = scanner.nextInt();
+        int[] a = {3,3,5,5};
+        int[] b = {7,7};
+        System.out.println(minimumAddedInteger(a,b));
+
     }
-//    public static int[][] matrixmul(int[][] a,int[][] b,int aLen,int bLen,int cLen){
-//
-//        int[][] ans = new int[aLen][cLen];
-//        for (int i = 0; i < aLen; i++) {
-//            for (int j = 0; j <bLen ; j++) {
-//            int sum=0;
-//                for (int k = 0; k < cLen; k++) {
-//
-//                sum+=a[i][k]*b[k][j];
-//                ans[i][j] = sum;
-//                }
-//            }
-//        }
-//        return ans;
-//
-//    }
+
+    public static int minimumAddedInteger(int[] nums1, int[] nums2) {
+//        Arrays.sort(nums1);Arrays.sort(nums2);
+        int min = Integer.MAX_VALUE;
+        int count = 0;
+        for(int i = 0;i<nums1.length-1;++i){
+           for(int j=i+1;j<nums1.length;++j){
+               int a = nums1[i];
+               int b = nums1[j];
+               if(nums2[0] - a == nums2[1] - b){
+                   int ans = nums2[0] -a;
+                   min = Math.min(ans,min);
+                   count++;
+
+               }
+               if(count==3) break;
+           }
+
+        }
+        return min;
+    }
 }

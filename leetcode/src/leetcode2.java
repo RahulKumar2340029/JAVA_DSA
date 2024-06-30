@@ -66,4 +66,5 @@ public class leetcode2 {
         return max;
 
     }
+    
 }

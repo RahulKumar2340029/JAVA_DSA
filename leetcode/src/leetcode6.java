@@ -1,12 +1,14 @@
-import java.util.Arrays;
+import java.util.*;
 
 public class leetcode6 {
     public static void main(String[] args) {
-        int[] arr = {-1,1,0,-3,3};
-//        System.out.println(Arrays.toString(productExceptSelf(arr)));
-        int[] arr2 = {3,2,1,0,4};
-//        System.out.println(canJump(arr2));
-        System.out.println(isPerfectSquare(1));
+        int[] arr = {1,2,1,2,3};
+
+//        System.out.println(noofdistinct(arr,0,3));
+////        System.out.println(Arrays.toString(productExceptSelf(arr)));
+//        int[] arr2 = {3,2,1,0,4};
+////        System.out.println(canJump(arr2));
+//        System.out.println(isPerfectSquare(1));
     }
     public static boolean isPerfectSquare(int num) {
         for(int i=0;i<=num/2+1;i++){
@@ -63,4 +65,27 @@ public class leetcode6 {
         }
         return product;
     }
+    public static int subarraysWithKDistinct(int[] nums, int k) {
+        return countkdistinct(nums,k) - countkdistinct(nums,k-1);
+    }
+    public static int countkdistinct(int[] nums, int k){
+        Map<Integer,Integer> map = new HashMap<>();
+        int i = 0;
+        int j = 0;
+        int count = 0;
+        while (j < nums.length){
+            map.put(nums[j++],map.getOrDefault(nums[j++],0)+1);
+            while (map.size()>k){
+                int left = nums[i++];
+                map.put(left,map.get(left)-1);
+                if (map.get(left)==0){
+                    map.remove(left);
+                }
+            }
+            count+=j-i+1;
+
+        }
+        return count;
+    }
+
 }

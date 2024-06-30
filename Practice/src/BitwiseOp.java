@@ -17,7 +17,7 @@ public class BitwiseOp {
         System.out.println(reset(50,5));
         System.out.println(neg(10));
         System.out.println(magicno(4));
-        System.out.println(DigitsII(6));
+        System.out.println(DigitsII(15));
         System.out.println(sumofnthpascal(5 ));
 
     }
@@ -52,8 +52,8 @@ public class BitwiseOp {
     }
     public static int unique(int[] arr){
         int ans=0;
-        for (int i = 0; i < arr.length; i++) {
-            ans^=arr[i];//concept: a^0=a
+        for (int elem:arr) {
+            ans^=elem;
         }
         return ans;
     }
