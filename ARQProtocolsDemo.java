@@ -27,28 +27,28 @@ class StopAndWaitARQ {
 class GoBackNARQ {
     public void simulate(int windowSize) {
         System.out.println("\n--- Go-Back-N ARQ Simulation ---");
-        int totalFrames = 10;
-        int base = 0;
-        int nextFrame = 0;
+        int totalFrames = 10;  // Total number of frames to send
+        int base = 0;          // Earliest unacknowledged frame
+        int nextSeqNum = 0;    // Next frame to send
         Random random = new Random();
 
         while (base < totalFrames) {
-            System.out.println("\nWindow: Base=" + base + ", NextFrame=" + nextFrame);
-
-            for (int i = nextFrame; i < base + windowSize && i < totalFrames; i++) {
-                System.out.println("Sending frame: " + i);
+            // Send all frames within the window that haven't been sent yet
+            while (nextSeqNum < base + windowSize && nextSeqNum < totalFrames) {
+                System.out.println("Sending frame: " + nextSeqNum);
+                nextSeqNum++;
             }
 
-            // Simulate acknowledgment and frame errors
+            // Simulate ACK or timeout
             if (random.nextBoolean()) {
+                // ACK received for the base frame
                 System.out.println("ACK received for frame: " + base);
                 base++;
             } else {
-                System.out.println("Timeout/Error: Resending window from frame: " + base);
-                nextFrame = base; // Reset nextFrame to base
+                // Timeout: retransmit from base
+                System.out.println("Timeout: Resending window from frame: " + base);
+                nextSeqNum = base;  // Reset to resend from base
             }
-
-            nextFrame = Math.min(base + windowSize, totalFrames);
         }
 
         System.out.println("All frames successfully sent using Go-Back-N ARQ!\n");
